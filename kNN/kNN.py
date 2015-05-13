@@ -86,7 +86,7 @@ def datingClassTest():
                     errorCount += 1.0
 
 	print "the total error rate is: %f" % (errorCount/float(numTestVecs))
-
+#像素转向量
 def img2vector(filename):
     returnVect = zeros((1,1024))
     fr = open(filename)
@@ -97,7 +97,7 @@ def img2vector(filename):
             returnVect[0,cur + j] = int(lineStr[j]) 
         cur += 32
     return returnVect 
-
+#手写类测试
 def handwritingClassTest():
     hwLabels = []
     trainingFileList = listdir('trainingDigits')
